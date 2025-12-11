@@ -2245,7 +2245,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     root: '/',
     debug: "env",
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1765445981330),
+    lastupdate: new Date(1765469867756),
     cdn: {
       izitoast_css: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/css/iziToast.min.css',
       izitoast_js: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/js/iziToast.min.js',
@@ -2639,12 +2639,12 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           <div class='post-wrapper'>
             <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="https://z-z27.github.io/2025/12/11/hello-world/">
+  <link itemprop="mainEntityOfPage" href="https://z-z27.github.io/2025/12/10/dasctf/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="zzzz">
   </span>
   <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-    <meta itemprop="name" content="Hello World">
+    <meta itemprop="name" content="Dasctf-2025-下半年(pwn 部分解)">
     <meta itemprop="description" content="">
   </span>
   
@@ -2657,16 +2657,21 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     
     <h2 class="article-title"  itemprop="name headline">
-      <a href="/2025/12/11/hello-world/"  itemprop="url">
-        Hello World
+      <a href="/2025/12/10/dasctf/"  itemprop="url">
+        Dasctf-2025-下半年(pwn 部分解)
       </a>
     </h2>
   
   <div class='md article-desc' itemprop="articleBody">
     
       
-        Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Qu...
+        Dasctf-2025-下半年rcms分析：checksec一下什么保护都开了，有简陋沙箱，可以打orw，使用IDA打开
+
+有很明显的UAF
+
+同时还有gift这个后面函数，只要使得程序的执行流执行到这里便可以传入shellcode，获得flag。
+进行尝试，发现libc版本对应2.27从docker上取下来，glibc2.27条件下tcache基本没有保护
+然后先填充满tcache，利用u...
       
     
   </div>
@@ -2674,12 +2679,20 @@ Qu...
     <div class='meta-v3' line_style='solid'>
       <div>
         
-        <time itemprop="dateCreated datePublished" datetime="2025-12-11T17:03:00+08:00">2025-12-11</time>
+        <time itemprop="dateCreated datePublished" datetime="2025-12-10T23:00:00+08:00">2025-12-10</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/pwn/">pwn</a>
+          
+            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+              <a href="/categories/pwn/" itemprop="url"><span itemprop="name">pwn</span></a>
+            </span>
+          
         
       </div>
       
         <div>
-          <a class='readmore' href='/2025/12/11/hello-world/' itemprop="url">
+          <a class='readmore' href='/2025/12/10/dasctf/' itemprop="url">
             Read More
           </a>
         </div>
@@ -2777,6 +2790,28 @@ Qu...
     
     
       
+  
+  <section class="widget category desktop pjax">
+    
+  <header>
+    
+      <a href='/blog/categories/'><i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i><span class='name'>文章分类</span></a>
+    
+  </header>
+
+
+    <div class='content'>
+      <ul class="entry navigation">
+        
+          <li><a class="flat-box"
+            title="/categories/pwn/" href="/categories/pwn/"
+            active-action="action-categoriespwn"
+            ><div class='name'>pwn</div><div class='badge'>(1)</div></a></li>
+        
+      </ul>
+    </div>
+  </section>
+
 
     
   
@@ -2785,6 +2820,21 @@ Qu...
     
     
       
+  
+  <section class="widget tagcloud desktop mobile pjax">
+    
+  <header>
+    
+      <a href='/blog/tags/'><i class="fa-solid fa-tags fa-fw" aria-hidden="true"></i><span class='name'>热门标签</span></a>
+    
+  </header>
+
+
+    <div class='content'>
+      <a href="/tags/%E5%A0%86/" style="font-size: 14px; color: #999">堆</a>
+    </div>
+  </section>
+
 
     
   
@@ -3040,7 +3090,7 @@ Qu...
   function pjax_giscus() {
     const HEAD = check_giscus();
     if (!HEAD) return;
-    let cfg = Object.assign({"theme":{"light":"light","dark":"dark"}},pdata.commentConfig)
+    let cfg = Object.assign({"theme":{"light":"light","dark":"dark"},"repo":"z-z27/z-z27.github.io","repo-id":"R_kgDOQmv6lw","category":"General","category-id":"DIC_kwDOQmv6l84Czqus","mapping":"pathname","reactions-enabled":"1","emit-metadata":"0","lang":"zh-CN"},pdata.commentConfig)
     const script = document.createElement('script');
     script.setAttribute('src', 'https://giscus.app/client.js');
     Object.keys(cfg).forEach(k=>{

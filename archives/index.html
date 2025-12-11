@@ -2245,7 +2245,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     root: '/',
     debug: "env",
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1765445981330),
+    lastupdate: new Date(1765469867756),
     cdn: {
       izitoast_css: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/css/iziToast.min.css',
       izitoast_js: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/js/iziToast.min.js',
@@ -2635,10 +2635,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 						<h2>2025</h2>
 					
 						<div class='timenode'>
-								<a class="meta" href="/2025/12/11/hello-world/">
-									<time>12-11</time>
+								<a class="meta" href="/2025/12/10/dasctf/">
+									<time>12-10</time>
 									
-										Hello World
+										Dasctf-2025-下半年(pwn 部分解)
 									
 									
 									
@@ -2727,6 +2727,28 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
       
+  
+  <section class="widget category desktop pjax">
+    
+  <header>
+    
+      <a href='/blog/categories/'><i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i><span class='name'>文章分类</span></a>
+    
+  </header>
+
+
+    <div class='content'>
+      <ul class="entry navigation">
+        
+          <li><a class="flat-box"
+            title="/categories/pwn/" href="/categories/pwn/"
+            active-action="action-categoriespwn"
+            ><div class='name'>pwn</div><div class='badge'>(1)</div></a></li>
+        
+      </ul>
+    </div>
+  </section>
+
 
     
   
@@ -2735,6 +2757,21 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
       
+  
+  <section class="widget tagcloud desktop mobile pjax">
+    
+  <header>
+    
+      <a href='/blog/tags/'><i class="fa-solid fa-tags fa-fw" aria-hidden="true"></i><span class='name'>热门标签</span></a>
+    
+  </header>
+
+
+    <div class='content'>
+      <a href="/tags/%E5%A0%86/" style="font-size: 14px; color: #999">堆</a>
+    </div>
+  </section>
+
 
     
   
@@ -2989,7 +3026,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   function pjax_giscus() {
     const HEAD = check_giscus();
     if (!HEAD) return;
-    let cfg = Object.assign({"theme":{"light":"light","dark":"dark"}},pdata.commentConfig)
+    let cfg = Object.assign({"theme":{"light":"light","dark":"dark"},"repo":"z-z27/z-z27.github.io","repo-id":"R_kgDOQmv6lw","category":"General","category-id":"DIC_kwDOQmv6l84Czqus","mapping":"pathname","reactions-enabled":"1","emit-metadata":"0","lang":"zh-CN"},pdata.commentConfig)
     const script = document.createElement('script');
     script.setAttribute('src', 'https://giscus.app/client.js');
     Object.keys(cfg).forEach(k=>{
