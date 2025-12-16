@@ -2245,7 +2245,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     root: '/',
     debug: "env",
     default: {"avatar":"volantis-static/media/placeholder/avatar/round/3442075.svg","link":"volantis-static/media/placeholder/link/8f277b4ee0ecd.svg","cover":"volantis-static/media/placeholder/cover/76b86c0226ffd.svg","image":"volantis-static/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1765894259635),
+    lastupdate: new Date(1765894450407),
     cdn: {
       izitoast_css: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/css/iziToast.min.css',
       izitoast_js: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/js/iziToast.min.js',
@@ -2646,7 +2646,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <meta itemprop="name" content="zzzz">
   </span>
   <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-    <meta itemprop="name" content="Pcbctf - pwn(部分解)">
+    <meta itemprop="name" content="Pcbctf-pwn(部分解)">
     <meta itemprop="description" content="">
   </span>
   
@@ -2660,21 +2660,22 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     <h2 class="article-title"  itemprop="name headline">
       <a href="/2025/12/15/Pcbctf%20/"  itemprop="url">
-        Pcbctf - pwn(部分解)
+        Pcbctf-pwn(部分解)
       </a>
     </h2>
   
   <div class='md article-desc' itemprop="articleBody">
     
       
-        Pcbctf -  pwn(部分解)myzoo分析：先checksec一下，保护全开，随后使用IDA打开。
+        Pcbctf-pwn(部分解)myzoo分析：先checksec一下，保护全开，随后使用IDA打开。
 
 结构比较奇怪，逆向也稍微偏奇怪。
 总的来说，程序有3个部分，dog,cat和bird，通过ptr的值来选择不同分支。
 dog:
      
 如果ptr 为3即初始值，便会对ptr的地址赋上dog的信息，在dog函数里面无论如何都会重置ptr的信息，然后将ptr 改为初始值。
-cat:...
+cat:
+  ...
       
     
   </div>
